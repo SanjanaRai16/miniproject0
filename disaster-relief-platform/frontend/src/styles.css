@@ -1,0 +1,115 @@
+/* Dashboard Container Styles */
+.dashboard-container {
+    padding: 4rem;
+    background-color: #f4f7fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Header Style */
+.dashboard-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Dashboard Options Wrapper */
+.dashboard-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Dashboard Option Links */
+.dashboard-options a {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Start from the right */
+    animation: slideInRight 1s ease-out forwards;
+}
+
+/* Right to Left Slide Animation */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation Delays for Sequential Effect */
+.dashboard-options a:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.dashboard-options a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.dashboard-options a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.dashboard-options a:nth-child(4) {
+    animation-delay: 0.8s;
+}
+.dashboard-options a:nth-child(5) {
+    animation-delay: 1s;
+}
+.dashboard-options a:nth-child(6) {
+    animation-delay: 1.2s;
+}
+.dashboard-options a:nth-child(7) {
+    animation-delay: 1.4s;
+}
+.dashboard-options a:nth-child(8) {
+    animation-delay: 1.6s;
+}
+.dashboard-options a:nth-child(9) {
+    animation-delay: 1.8s;
+}
+
+/* Hover Effects */
+.dashboard-options a:hover {
+    background-color: #0056b3;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-options a {
+        font-size: 1.1rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .dashboard-options a {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
